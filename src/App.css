@@ -1,4 +1,5 @@
-html, body {
+/* App.css */
+body, html {
   margin: 0;
   padding: 0;
   background-color: #73E37C;
@@ -9,13 +10,6 @@ html, body {
   position: relative;
 }
 
-/* Make sure the body fills the fixed size and doesn't scroll */
-body {
-  box-sizing: border-box;
-  position: relative;
-}
-
-/* Shapes absolute positioning, opacity and transitions */
 .shape {
   position: absolute;
   opacity: 0;
@@ -23,14 +17,11 @@ body {
   transition: transform 20s ease-out, opacity 5s ease-in-out;
 }
 
-/* Center intro container horizontally and positioned vertically at 250px */
 .intro {
   position: absolute;
   top: 250px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  max-width: 1200px;  /* prevent text from going too wide */
   text-align: center;
   opacity: 0;
   transition: opacity 2s ease-in-out;
@@ -39,11 +30,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;  /* small side padding for smaller screens */
-  box-sizing: border-box;
+  width: 100%;
 }
 
-/* Name styling - big uppercase font, responsive with vw */
 .intro .name {
   font-family: 'Oswald', sans-serif;
   font-size: 10vw;
@@ -53,16 +42,17 @@ body {
   white-space: nowrap;
   text-transform: uppercase;
   letter-spacing: -0.08em;
-  padding: 0 2rem;
   z-index: 10;
+  padding: 0 2rem;
+  text-align: center;
 }
 
-/* Description styling below the name */
 .description {
   font-family: 'Oswald', sans-serif;
   font-size: 10vw;
   color: black;
   font-weight: bold;
+  z-index: 10;
   text-transform: uppercase;
   padding: 0 2rem;
   text-align: center;
@@ -72,29 +62,13 @@ body {
   transition: opacity 2s ease, transform 2s ease;
   letter-spacing: -0.08em;
   line-height: 0.85;
-  z-index: 10;
+  margin-top: 2rem;
 }
 
-/* Letter styling for interactivity */
 .letter {
   display: inline-block;
   transition: transform 0.3s ease-out, color 0.3s ease;
-  margin: 0;
+  margin: 0 0.08em; /* add horizontal space between letters */
   position: relative;
-  z-index: 10;
-  cursor: default;
-}
-
-/* Footer fixed at bottom with opacity */
-
-.footer {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  font-size: 16px;
-  color: black;
-  opacity: 0.8;
   z-index: 10;
 }
